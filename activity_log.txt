@@ -4,6 +4,11 @@ Notes:
 
 Feb 17th 2020:
 
+git commit: "settings directory refactored to basesettings with devsettings child file, settings_notes added to config directory"
+Created settings_notes.txt file in config directory. 
+Used runserver with settings variable to check homepage view: python manage.py runserver --settings=config.devsettings
+Moved DEBUG variable from basesettings.py to devsettings.py
+Added devsettings.py child file to basesettings. Moved DATABASE variable to devsettings file. 
 
 Checked runserver still worked
 Updated manage.py with path to basesettings 
