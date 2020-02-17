@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class managementConfig(AppConfig):
-    name = 'management'
+class Charlieawbery_rootConfig(AppConfig):
+    name = 'charlieawbery_root'

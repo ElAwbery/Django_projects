@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Additional apps
+    'hubapp.apps.HubappConfig',
+    'charlieawbery_root.apps.Charlieawbery_rootConfig',
 ]
 
 MIDDLEWARE = [

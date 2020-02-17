@@ -3,7 +3,15 @@ Notes:
  - All entries are always in reverse order. Latest activity is always at top. 
 
 Feb 16th 2020:
+Added to settings:
+    # Additional apps
+    'hubapp.apps.HubappConfig',
+    'charlieawbery_root.apps.Charlieawbery_rootConfig',
 
+Updated app name to new charlieawbery_root in apps.py (charlieawbery_root directory)
+git commit: "added new app, hubapp"
+Created hubapp for landing page and top level coordination of all my sites
+git commit "renamed management package to charlieawbery_root, imported mysqlclient, configured db"
 Renamed management package to charlieawbery_root
 Settings.py: ROOT_URLconf, set to 'config.urls', WSGI_APPLICATION set to config.wsgi.application
 Changed development environment database settings in settings.py for MySQL database (name of new db is charlieawbery)
