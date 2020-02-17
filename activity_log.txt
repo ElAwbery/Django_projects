@@ -3,6 +3,11 @@ Notes:
  - All entries are always in reverse order. Latest activity is always at top. 
 
 Feb 16th 2020:
+Added url dispatcher for hubapp (empty string) to urls.py in config app
+Created urls.py in hubapp and configured frontpage url path
+Created a hubbapp.views.py frontpage view function 
+git commit: "updated settings with additional apps, hubapp and charlieawbery_root"
+Checked server connection with runserver
 Added to settings:
     # Additional apps
     'hubapp.apps.HubappConfig',
