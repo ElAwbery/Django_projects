@@ -2,7 +2,37 @@
 Notes:
  - All entries are always in reverse order. Latest activity is always at top. 
 
+Feb 17th 2020:
+
+
+Made manual changes back to old version:
+ - nuked productionconfig directory
+ - changed names in wsgi, settings and manage.py back to config from devconfig
+ - changed directory name back to config from devconfig
+
+Got really annoyed with trying to find how to bring up an old git version in my IDE window and gave up for now. I think it's probably done using a hard reset but by the time I could do that, I'd already nuked my recent commits and didn't want to reset to an older version. 
+
+Added: 
+[alias]
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+to git config file in charlieawbery home directory, so that I could view git history in bash. Also added it to Django_portfolio git config on Mac.  
+
+Did $ git reset HEAD~2  
+I thought this would change my cd back to a previous state but it didn't.  
+
+Read Two Scoops chapter 5 on using multiple settings file and decided to change the hierarchy again, to avoid bug creation problems in separate dev and production directories. 
+
+git commit: "production and dev config folders separated. devconfig removed from version control"
+Tested runserver for homepage view. 
+Renamed config copy to productionconfig. 
+Updated manage.py with devconfig name.
+Copied config folder. Renamed config folder to devconfig and updated name in settings and wsgi files. 
+
 Feb 16th 2020:
+
+git commits: "created homepage view for hubapp, configured urls" and "urls.py added for hubapp"
+
+Checked server connection for new homepage view. 
 Added url dispatcher for hubapp (empty string) to urls.py in config app
 Created urls.py in hubapp and configured frontpage url path
 Created a hubbapp.views.py frontpage view function 

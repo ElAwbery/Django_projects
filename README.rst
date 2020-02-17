@@ -8,3 +8,4 @@ charlieawbery (repository root)
  - manage.py
  - readme
  - requirements.txt
+ - hubapp sets up the landing page for all my sites and projects
