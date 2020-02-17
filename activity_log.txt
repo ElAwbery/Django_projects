@@ -1,3 +1,18 @@
+
+Notes:
+ - All entries are always in reverse order. Latest activity is always at top. 
+
+Feb 16th 2020:
+
+Renamed management package to charlieawbery_root
+Settings.py: ROOT_URLconf, set to 'config.urls', WSGI_APPLICATION set to config.wsgi.application
+Changed development environment database settings in settings.py for MySQL database (name of new db is charlieawbery)
+pip imported mysqlclient and updated rqrments.txt
+git commit: "Django installed, requirements text updated"
+updated requirements text with pip freeze
+installed Django version 3.0.3
+
+Feb 15th 2020:
 Added .vscode folder to .gitignore
 
 In management app, the apps.py file had automatically configured a class called portfolioconfig, with name portfolio. This was because I named the original command line app setup 'portfolio.' I later changed it to 'management'. So I rewrote the apps.py file: changed the class name to managementconfig and named it management. 
