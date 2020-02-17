@@ -1,0 +1,6 @@
+To run child settings (dev or production) files, import basesettings into init file:
+from .basesettings import *
+as well as into the child settings files. 
+
+The python runserver command takes a settings variable:
+python manage.py runserver --settings=config.childfile

@@ -5,6 +5,14 @@ Notes:
 Feb 17th 2020:
 
 
+Checked runserver still worked
+Updated manage.py with path to basesettings 
+Changed settings.py name to basesettings.py
+
+git commit: "manual change back to previous development configuration, nuked all production config"
+git commit: "added changes to .gitignore, readme and activity_log"
+Tested runserver for homepage view. 
+
 Made manual changes back to old version:
  - nuked productionconfig directory
  - changed names in wsgi, settings and manage.py back to config from devconfig
