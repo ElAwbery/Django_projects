@@ -17,4 +17,6 @@ from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
 
-application = get_wsgi_application()
+# application variable named 'app' so that there's no confusion
+# when passenger_wsgi imports to application variable
+app = get_wsgi_application()
