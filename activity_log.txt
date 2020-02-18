@@ -3,7 +3,7 @@ Notes:
  - All entries are always in reverse order. Latest activity is always at top. 
 
 Feb 18th 2020:
-
+Transferred data via a SQL dump through the CPanel PHPMyAdmin interface into charlieawbery db on the server. At the moment there is only django admin data in there, no personal files. 
 Added new database to MySQL databases in cPanel. My username charlie_charlie, new database charlie_charlieawbery. 
 
 Feb 17th 2020:
