@@ -1,3 +1,6 @@
+# If requirements for development and production are different
+# Make a requirements/ directory and include separate files for 
+# base.txt, dev.txt, production.txt
 asgiref==3.2.3
 Django==3.0.3
 mysqlclient==1.4.6

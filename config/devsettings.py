@@ -1,5 +1,8 @@
 from .basesettings import *
 
+# Order of variables matters. SECRET_KEY must come first. 
+SECRET_KEY = '_hs65QtB2tbXToswjL_0w1SqjO4ggzIHzA'
+
 DEBUG = True
 
 DATABASES = {
@@ -13,3 +16,4 @@ DATABASES = {
         'PORT': '8889',
     }
 }
+

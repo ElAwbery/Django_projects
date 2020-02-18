@@ -4,6 +4,12 @@ Notes:
 
 Feb 17th 2020:
 
+Created templates directory in root directory, added 404.html file for production purposes. Django renders this when debug is false. Didn't connect it to response path yet. 
+Added TEMPLATE_DEBUG = False variable to productionsettings.py
+git commit: "productionsettings file added to config directory"
+Added DEBUG, DATABASE and ALLOWED_HOSTS variables
+Created a productionsettings file in config directory.
+
 git commit: "settings directory refactored to basesettings with devsettings child file, settings_notes added to config directory"
 Created settings_notes.txt file in config directory. 
 Used runserver with settings variable to check homepage view: python manage.py runserver --settings=config.devsettings
