@@ -3,7 +3,7 @@ env
 *.pyc
 __pycache__
 
-config/devsettings.py
+charlieawbery_root/config/devsettings.py
 .venv
 .vscode/
 
