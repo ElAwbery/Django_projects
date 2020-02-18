@@ -1,2 +1,2 @@
-import app from charlieawbery/config/wsgi
+from charlieawbery/config/wsgi import app 
 application = myproject.wsgi.app
