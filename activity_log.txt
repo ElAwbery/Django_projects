@@ -2,6 +2,10 @@
 Notes:
  - All entries are always in reverse order. Latest activity is always at top. 
 
+Feb 18th 2020:
+
+Added new database to MySQL databases in cPanel. My username charlie_charlie, new database charlie_charlieawbery. 
+
 Feb 17th 2020:
 
 git pull
