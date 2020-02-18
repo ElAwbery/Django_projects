@@ -1,2 +1,2 @@
-from charlieawbery/config/wsgi import app 
+from .wsgi import app 
 application = myproject.wsgi.app
