@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 
 import os
 
+# Don't hardcode paths to variables in settings. See "handling file paths 
+# in settings" in Two Scoops.
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -54,6 +56,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'config.urls'
 
+# Don't hardcode paths to templates. See "handling file paths in settings" 
+# in Two Scoops.
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -109,6 +113,8 @@ USE_L10N = True
 
 USE_TZ = True
 
+# Don't hardcode paths to static files. See "handling file paths in settings" 
+# in Two Scoops.
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/

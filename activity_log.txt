@@ -4,6 +4,15 @@ Notes:
 
 Feb 17th 2020:
 
+git commit: "separated secret keys from settings, assigned new key to devsettings"
+Tested production settings in runserver
+Tested development settings in runserver
+Generated a new secret key, assigned it to SECRET_KEY variable in devsettings
+Wrote get_secret function with .json open for productionsettings
+Imported json into productionsettings
+Added a secrets.json file to charlieawbery_root directory, commented out secret key variable in basesettings file.
+In .gitignore, changed devsettings directory to config/devsettings.py
+
 Created templates directory in root directory, added 404.html file for production purposes. Django renders this when debug is false. Didn't connect it to response path yet. 
 Added TEMPLATE_DEBUG = False variable to productionsettings.py
 git commit: "productionsettings file added to config directory"

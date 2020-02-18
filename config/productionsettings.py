@@ -26,7 +26,7 @@ TEMPLATE_DEBUG = False
 
 ALLOWED_HOSTS = ['67.20.55.28', 'charlieawbery.com', 'luckyegg.org', 'idletwilight.com', 'meaningness.com',]
 
- DATABASES = {
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         # MySQL settings use the name of the db not the path
