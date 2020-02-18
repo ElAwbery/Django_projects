@@ -4,6 +4,8 @@ Notes:
 
 Feb 17th 2020:
 
+git pull
+Created virtual environment inside charlieawbery directory. 
 Generated ssh key and cloned github repo to a new directory in cPanel files, charlieawbery. 
 
 From here up, production activity is separate from dev activity. Changes to this file are common to github repo and cPanel activity log but are not recorded in the local development environment. 
