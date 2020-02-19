@@ -74,7 +74,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'config.wsgi.application'
+# Changed this path from config.wsgi.application because wsgi file is no longer in config directory. Then realized that the variable is ultimately configured by the passenger_wsgi file. Maybe this variable is not needed? And if it is needed, is the path name correct seeing as the passenger_wsgi file is in the app one level above this settings file? 
+WSGI_APPLICATION = 'charlieawbery.wsgi.application'
 
 
 # Database
