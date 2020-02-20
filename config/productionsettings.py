@@ -30,7 +30,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         # MySQL settings use the name of the db not the path
-        'NAME': 'charlieawbery',
+        'NAME': 'charlie_charlieawbery',
         # Name of MySQL user on CPanel is 'charlie'
         'USER': 'charlie_charlie',
         'PASSWORD': 'LbDT3ryu9uug',

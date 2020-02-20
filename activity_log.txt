@@ -2,8 +2,48 @@
 Notes:
  - All entries are always in reverse order. Latest activity is always at top. 
 
+
+Feb 19th 2020:
+
+
+Nuked WSGI_APPLICATION variable in debugsettings and the server connected
+WSGI error
+Ran manage.py runserver --settings=config.debugsettings
+Created a debugsettings.py file in config directory
+
+Altered views to have holding pages for Lucky Egg and Idletwilight. 
+Commented out 'idletwilight' path and link from base.html navbar section
+Updated hubapp.base.html reflections paths to idletwilight. 
+Error: no reverse math, 'reflections' is not a registered namespace.
+
+Updated hubapp.base.html from 'projects' namespaces to 'hubapp'
+Error: no reverse match, 'projects' is not a registered namespace.
+
+hubbap.views.py: Substituted 'hubbapp' for 'projects' in render template argument for all_projects and project_detail page views: ie changed 'projects/all_projects.html' and 'projects/details.html'
+Changed db table name to hubapp_hubapp from hubapp in PhPMyAdmin
+Test: 500Server error, db name hubapp_hubapp doesn't exist
+Changed db name in basesettings from charlieawbery to charlie_charlieawbery
+Test: 500Server error, database access denied.
 Feb 18th 2020:
 
+Tested page view, got a server error(500) for the empty string frontpage and a Page not found error for the /projects page. 
+Reset Apache. 
+Made migrations to new hubapp table in MySQL db on server from ssh shell. 
+Troubleshot a couple of typos running Python. 
+
+Added main.css file to Hubapp static files. Copied folder hierarchy from projects app
+
+Wrote urls.py for hubapp. Imported all views, kept notes in the file about what I added and changed. The empty string was previously set to a toy test frontpage view, which I have commented out for now. 
+
+Added Hubapp model to admin.py file in charlieawbery/hubapp, registering Hubapp to Django Admin dashboard. 
+
+Added models.py file to charlieawbery/hubapp: created Hubapp model to match Hubapp table in charlieawbery database. 
+
+
+Added views.py file to charlieawbery/hubapp in cPanel files: I am keeping the url for the hubapp to be 'projects'. The model is Hubapp. 
+Changed 'reflections' project to 'idletwilight' in the hubapp database.
+Added Hubapp database to charlieawbery via PHPMyAdmin, copied projects data to it. 
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 tested page view, it worked bitches. 
 
 Made path relative, changed it from charlieawbery.config.productionsettings to config.productionsetttings
