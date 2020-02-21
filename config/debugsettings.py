@@ -28,20 +28,8 @@ DEBUG = False
 
 TEMPLATE_DEBUG = False
 
-ALLOWED_HOSTS = ['67.20.55.28', 'charlieawbery.com', 'luckyegg.org', 'idletwilight.com', 'meaningness.com',]
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        # MySQL settings use the name of the db not the path
-        'NAME': 'charlie_charlieawbery',
-        # Name of MySQL user on CPanel is 'charlie'
-        'USER': 'charlie_charlie',
-        'PASSWORD': 'LbDT3ryu9uug',
-        'HOST': 'localhost',
-        'PORT': '',
-    }
-}
+ALLOWED_HOSTS = ['127.0.0.1/8000']
+# '67.20.55.28', 'charlieawbery.com', 'luckyegg.org', 'idletwilight.com', 'meaningness.com', 
 
 # Gets secret key from secrets module
 with open('charlieawbery_root/secrets.json') as f:
@@ -55,8 +43,7 @@ def get_secret(setting, secrets=secrets):
     except KeyError:
         error_msg = 'Set the {0} environment.variable'.format(setting)
         raise ImproperlyConfigured(error_msg)
-
-
+        
 SECRET_KEY = get_secret('SECRET_KEY')
 
 INSTALLED_APPS = [
@@ -105,9 +92,6 @@ TEMPLATES = [
 # WSGI_APPLICATION = 'charlieawbery.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/2.2/ref/settings/#databases
-# DATABASE variable is set in child files
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -126,6 +110,22 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+
+# Database
+# https://docs.djangoproject.com/en/2.2/ref/settings/#databases
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        # MySQL settings use the name of the db not the path
+        'NAME': 'charlie_charlieawbery',
+        # Name of MySQL user on CPanel is 'charlie'
+        'USER': 'charlie_charlie',
+        'PASSWORD': 'LbDT3ryu9uug',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}
 
 
 # Internationalization

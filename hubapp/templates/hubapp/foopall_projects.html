@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 
+<h1>This is the Projects html page showing</h1>
+<!--- !!!
 {% extends 'hubapp/base.html' %}
 
 {% load static %}
 
 {% block content %}
+<!-- deleted <p> tags from around h1 title because there was an 'ignored'message, but if something is wrong with the layout I should try putting them back.
 <h1>Projects</h1>
 <div class="row">
 {% for project in projects %}
@@ -14,8 +17,9 @@
             <div class="card-body">
                 <h5 class="card-title">{{ project.title }}</h5>
                 <p class="card-text">{{ project.description }}</p>
+
                 <!-- in the href below app_name:path is the namespace that uniquely identifies the Django view 
-                projects is the app name variable from urls.py urlpatterns, project_detail is the name variable -->
+                <!--  projects is the app name variable from urls.py urlpatterns, project_detail is the name variable 
                 <a href="{% url 'hubapp:project_detail' project.pk %}" class="btn btn-primary">About</a>
             </div>
         </div>
@@ -24,3 +28,4 @@
 {% endfor %}
 </div>
 {% endblock %}
+-->

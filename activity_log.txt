@@ -3,9 +3,56 @@ Notes:
  - All entries are always in reverse order. Latest activity is always at top. 
 
 
+Feb 20th:
+
+
+
+David helped: turned out that the html page commenting out was not working. 
+
+Didn't work. 
+Used: python manage.py collectstatic
+Template not loading in the browser was a Django caching error. Cleared browser histories, but it turned out that my commented out code was still loading from an old cached version. 
+
+After this I was able to start debugging my code again in the local environment.
+
+David helped fix this error: 
+Django.db.utils.OperationalError message: “Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)”
+Django throws this error message when it can’t get the db connection info from your app (host, port, usermame, password, etc). It has a null port bc it didn’t load a settings file or something like that. The port variable doesn’t get initialized.
+SOLUTION:
+Whatever command you are using in the Django server, e.g. migrate, give it the settings file if it’s not called ‘settings.py’ 
+e.g:
+$ python manage.py migrate appname —settings=app.basesettings
+
+Switched to config.basesettings, added local database there and used hardoded SECRET_KEY
+Got a weird connection error for MySQL, re-started the local MAMP servers
+Used FTP to copy latest versions of hubapp, config and charlieawbery_root directories to VSC on my Mac. Kept the old Mac versions in a folder called FOO inside charlieawbery project. 
+Runserver command worked and established the connection
+Changed database settings to server database in debugsettings
+!! It is not my code that makes the server connection to localhost, it is the runserver command !!
+Server connection aborted with error message: "Can't connect to MySQL server on '127.0.0.1' (111)"
+Added database settings for local database to debugsettings
+$ python3 manage.py runserver --settings=config.debugsettings achieves connection to localhost, but page view does not work
+I am using a new config.debugsettings.py file I made for this purpose.
+I want to use the code that is stored in my cPanel files but debug it in a local environment. 
+Aim1: to set up debug environment so that I can see python/Django error messages in the shell
+
 Feb 19th 2020:
 
+Hardcoded the path from charlieawbery through to the html file. 
+Changed path to omit 'hubapp/' because the file is in the same directory. 
+This returned a server error. So the render function is choking on getting the html page.
+Changed return statement for all_projects view function to: 
+    return render(request, 'hubapp/all_projects.html')
+commented out whole of all_projects html page, turned it into a single header. 
+So the next task is to load an html page from that function. 
+Got page view as simple string return directly from the all_projects function.
+Commented out projects load from database in same view function. 
+Changed httpresponse object for all_projects view funtion to a string. 
 
+Ran $ $ python3 manage.py migrate --fake hubapp
+db already exists error
+Ran $ python3 manage.py migrate hubapp
+Runserver error: migrations not applied
 Nuked WSGI_APPLICATION variable in debugsettings and the server connected
 WSGI error
 Ran manage.py runserver --settings=config.debugsettings

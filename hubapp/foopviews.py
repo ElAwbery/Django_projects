@@ -14,7 +14,8 @@ def all_projects(request):
     # Load all objects from databaase
     # projects=Hubapp.objects.all()
     # return HttpResponse("<h1>Projects page here</h1>")
-    return render(request, 'hubapp/all_projects.html') # {'projects': projects}
+    print("is AJAX?", request.is_ajax())
+    return render(request, '/home/charlie/charlieawbery/hubapp/templates/hubapp/all_projects.html') # {'projects': projects}
 
 def project_detail(request, pk):
     '''pk is a primary key, integer'''

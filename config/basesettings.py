@@ -75,6 +75,42 @@ TEMPLATES = [
     },
 ]
 
+
+
+'''
+This is the template set up that worked for Django project on my Mac, once I had installed jinja2:
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.jinja2.Jinja2',
+        #'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'environment': 'portfolio.jinja2.environment'
+            },
+    },
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [
+            os.path.join(BASE_DIR, 'projects/templates'),
+            ],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ]
+        },
+    },
+]
+'''
+
+
+
+
+
 # Changed this path from config.wsgi.application because wsgi file is no longer in config directory. Then realized that the variable is ultimately configured by the passenger_wsgi file. Maybe this variable is not needed? And if it is needed, is the path name correct seeing as the passenger_wsgi file is in the app one level above this settings file? 
 WSGI_APPLICATION = 'charlieawbery.wsgi.application'
 
