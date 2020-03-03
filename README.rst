@@ -1,16 +1,41 @@
-This is a public copy of the set-up for some of my Django projects. The project hierarchy I use separates configuration from project management. It's a stripped down version of one of the 
-[Django cookiecutter] (https://cookiecutter-django.readthedocs.io/en/latest/) hierarchies. 
+This is a public copy of the set-up for some of my Django projects. The project hierarchy I use separates configuration from project management. It's a stripped down version of one of the [Django cookiecutters](https://cookiecutter-django.readthedocs.io/en/latest/) recommended in [Two Scoops of Django](https://www.amazon.com/Two-Scoops-Django-Best-Practices/dp/0981467342). 
 
-
-
-
+This is a hierarchy map showing the relationship of the most important apps and files: 
+```
 charlieawbery (repository root)
- - .venv (for all my django project virtual environments. Each django project may have its own environment.)
- - management app (includes admin.py and init)
- - config (configuration root directory)
- - gitignore
- - activity log
- - manage.py
- - readme
- - requirements.txt
- - hubapp sets up the landing page for all my sites and projects
+- - apps settings
+- - secrets.json
+- - init.py
+- - .venv (all my Django virtual environments here)
+- - config 
+     - - basesettings.py
+     - - productionsettings.py
+     - - devsettings.py
+     - - init.py
+     - - urls.py
+- - gitignore
+- - activity log
+- - manage.py
+- - readme
+- - requirements.txt (pip freeze)
+- passenger_wsgi.py
+- wsgi.py
+- - hubapp
+    - - init.py
+    - - models.py
+    - - views.py
+    - - urls.py
+    - - templates folder
+        - - html files
+    - - static
+        - - css folder
+        - - images folder
+```
+
+In production I keep static files in a separate directory at the same level as the root directory. This is generally considered good practice, though it doesn't really matter for projects this small. However, it does make for a simple view of the overall project and an easily accessible, unique path to access all static files. 
+
+
+
+
+
+
