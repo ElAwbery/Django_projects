@@ -1,4 +1,4 @@
-This is a public copy of the set-up for some of my Django projects. The project hierarchy I use separates configuration from project management. It's a stripped down version of one of the [Django cookiecutters](https://cookiecutter-django.readthedocs.io/en/latest/) recommended in [Two Scoops of Django](https://www.amazon.com/Two-Scoops-Django-Best-Practices/dp/0981467342) 
+This is a public copy of the set-up for some of my Django projects. The project hierarchy I use separates configuration from project management. It's a stripped down version of one of the [Django cookiecutters](https://cookiecutter-django.readthedocs.io/en/latest/) recommended in [Two Scoops of Django.](https://www.amazon.com/Two-Scoops-Django-Best-Practices/dp/0981467342) 
 
 This is a hierarchy map showing the relationship of the most important apps and files: 
 ```
