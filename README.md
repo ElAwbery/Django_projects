@@ -3,6 +3,8 @@ This is a public copy of the set-up for some of my Django projects. All secret k
 This is a hierarchy map showing the relationship of the most important apps and files: 
 ```
 charlieawbery (repository root)
+- charlieawbery_root
+     - - contains secret key files
 - apps settings
 - secrets.json
 - init.py
