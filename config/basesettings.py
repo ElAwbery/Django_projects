@@ -21,12 +21,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-# !!! secret key must be uncommented so as to make migrations for new database!!!
-# SECRET_KEY = '@0y)+j31ycp68+dh4762syr93zjy%cd9)asnegn3th8pt@1g^r'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG variable is set in child files
+
 
 # ALLOWED_HOSTS = []
 
@@ -78,7 +76,7 @@ TEMPLATES = [
 
 
 '''
-This is the template set up that worked for Django project on my Mac, once I had installed jinja2:
+This is the template set up that works for installatino with jinja2:
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.jinja2.Jinja2',
@@ -107,11 +105,7 @@ TEMPLATES = [
 ]
 '''
 
-
-
-
-
-# Changed this path from config.wsgi.application because wsgi file is no longer in config directory. Then realized that the variable is ultimately configured by the passenger_wsgi file. Maybe this variable is not needed? And if it is needed, is the path name correct seeing as the passenger_wsgi file is in the app one level above this settings file? 
+# Changed this path from config.wsgi.application because wsgi file is no longer in config directory. 
 WSGI_APPLICATION = 'charlieawbery.wsgi.application'
 
 
@@ -155,6 +149,6 @@ USE_TZ = True
 # in Two Scoops.
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/2.2/howto/static-files/
+
 
 STATIC_URL = '/static/'
