@@ -13,7 +13,7 @@ charlieawbery (repository root)
      - - devsettings.py
      - - init.py
      - - urls.py
-- - gitignore
+- - .gitignore
 - - activity log
 - - manage.py
 - - readme
