@@ -24,16 +24,16 @@ DEBUG = False
 
 TEMPLATE_DEBUG = False
 
-ALLOWED_HOSTS = ['67.20.55.28', 'charlieawbery.com', 'luckyegg.org', 'idletwilight.com', 'meaningness.com',]
+ALLOWED_HOSTS = ['#######','##########', '#######', '###########']
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         # MySQL settings use the name of the db not the path
-        'NAME': 'charlie_charlieawbery',
-        # Name of MySQL user on CPanel is 'charlie'
-        'USER': 'charlie_charlie',
-        'PASSWORD': 'LbDT3ryu9uug',
+        'NAME': 'data_base_name_here',
+        # Name of MySQL user on CPanel
+        'USER': 'username_here',
+        'PASSWORD': '##############',
         'HOST': 'localhost',
         'PORT': '',
     }
@@ -46,10 +46,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         # MySQL settings use the name of the db not the path
-        'NAME': 'charlieawbery',
+        'NAME': '##############',
         'USER': 'root',
         'PASSWORD': 'root',
         'HOST': '127.0.0.1',
-        'PORT': '8889',
+        'PORT': '####',
     }
 } '''
