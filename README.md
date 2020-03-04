@@ -35,6 +35,23 @@ charlieawbery (repository root)
 
 In production I keep static files in a separate directory at the same level as the root directory. This is generally considered good practice, though it doesn't really matter for projects this small. However, it does make for a simple view of the overall project and an easily accessible, unique path to access all static files. 
 
+My local development set up uses the typical Django structure for static files and templates, so that there is an extra folder mirroring the app name for templates and static files, for example as follows:
+
+```
+- hubapp
+     - - templates
+          - - - hubapp
+               - - - - base.html
+               - - - - all_projects.html
+               - - - - resume.html 
+     - - static
+          - - - hubapp
+               - - - - css folder
+               - - - - images folder
+
+```
+Django keeps track of static files in a cache automatically created outside the main project folder. The extra folder ensures that any duplicate file names are recognized as belonging to their separate projects. This is not necessary to serve files from the remote server. Static files are kept separately in a public_html folder at the same level as the root directory and Apache uses the file pathname to access templates. 
+
 Other Django apps live at the same level as hubapp in the above hierarchy. Not all of them are public yet. I work on the principle of keeping modularity as small and as contained as possible. All of the apps are designed to be easily pluggable. 
 
 
