@@ -1,21 +1,19 @@
 
 Notes:
  - All entries are always in reverse order. Latest activity is always at top. 
-
-
+ - Keeping this file in the public project as an example of how I keep track
+ 
 Feb 20th:
 
-
-
-David helped: turned out that the html page commenting out was not working. 
+Turned out that the html page commenting out was not working. 
 
 Didn't work. 
 Used: python manage.py collectstatic
 Template not loading in the browser was a Django caching error. Cleared browser histories, but it turned out that my commented out code was still loading from an old cached version. 
 
-After this I was able to start debugging my code again in the local environment.
+After this I was able to start debugging again in the local environment.
 
-David helped fix this error: 
+Took a while to fix this error: 
 Django.db.utils.OperationalError message: “Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)”
 Django throws this error message when it can’t get the db connection info from your app (host, port, usermame, password, etc). It has a null port bc it didn’t load a settings file or something like that. The port variable doesn’t get initialized.
 SOLUTION:
@@ -25,10 +23,10 @@ $ python manage.py migrate appname —settings=app.basesettings
 
 Switched to config.basesettings, added local database there and used hardoded SECRET_KEY
 Got a weird connection error for MySQL, re-started the local MAMP servers
-Used FTP to copy latest versions of hubapp, config and charlieawbery_root directories to VSC on my Mac. Kept the old Mac versions in a folder called FOO inside charlieawbery project. 
+Used FTP to copy latest versions of hubapp, config and charlieawbery_root directories to VSC on my Mac. Keeping the old Mac versions in a folder called FOO inside charlieawbery project. 
 Runserver command worked and established the connection
 Changed database settings to server database in debugsettings
-!! It is not my code that makes the server connection to localhost, it is the runserver command !!
+
 Server connection aborted with error message: "Can't connect to MySQL server on '127.0.0.1' (111)"
 Added database settings for local database to debugsettings
 $ python3 manage.py runserver --settings=config.debugsettings achieves connection to localhost, but page view does not work
@@ -44,7 +42,7 @@ This returned a server error. So the render function is choking on getting the h
 Changed return statement for all_projects view function to: 
     return render(request, 'hubapp/all_projects.html')
 commented out whole of all_projects html page, turned it into a single header. 
-So the next task is to load an html page from that function. 
+So the next task is to load an html page from that function. Done.
 Got page view as simple string return directly from the all_projects function.
 Commented out projects load from database in same view function. 
 Changed httpresponse object for all_projects view funtion to a string. 
@@ -71,6 +69,7 @@ Changed db table name to hubapp_hubapp from hubapp in PhPMyAdmin
 Test: 500Server error, db name hubapp_hubapp doesn't exist
 Changed db name in basesettings from charlieawbery to charlie_charlieawbery
 Test: 500Server error, database access denied.
+
 Feb 18th 2020:
 
 Tested page view, got a server error(500) for the empty string frontpage and a Page not found error for the /projects page. 
@@ -90,7 +89,9 @@ Added models.py file to charlieawbery/hubapp: created Hubapp model to match Huba
 Added views.py file to charlieawbery/hubapp in cPanel files: I am keeping the url for the hubapp to be 'projects'. The model is Hubapp. 
 Changed 'reflections' project to 'idletwilight' in the hubapp database.
 Added Hubapp database to charlieawbery via PHPMyAdmin, copied projects data to it. 
+
  - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+ 
 tested page view, it worked bitches. 
 
 Made path relative, changed it from charlieawbery.config.productionsettings to config.productionsetttings
@@ -110,7 +111,7 @@ Updated passenger_wsgi.py with a forced path switch from Python2 to Python3
 
 Tested page view, same passenger error page. 
 Restarted Apache.
-Fixed a stupid typo in passenger_wsgi.py
+Fixed a typo in passenger_wsgi.py
 
 changed the WSGI_APPLICATION variable to charlieawbery.wsgi.application just in order to keep it as the default while testing other things. 
 
@@ -127,7 +128,7 @@ Changed wsgi path in basesettings from config.wsgi.application to charlieawbery.
 
 Pip installed Django and mysqlclient into charlieawbery virtual environment on the server. 
 Transferred data via a SQL dump through the CPanel PHPMyAdmin interface into charlieawbery db on the server. At the moment there is only django admin data in there, no personal files. 
-Added new database to MySQL databases in cPanel. My username charlie_charlie, new database charlie_charlieawbery. 
+Added new database to MySQL databases in cPanel. My username "###########", new database '##############'. 
 
 Feb 17th 2020:
 
@@ -169,9 +170,6 @@ Tested runserver for homepage view.
 Made manual changes back to old version:
  - nuked productionconfig directory
  - changed names in wsgi, settings and manage.py back to config from devconfig
- - changed directory name back to config from devconfig
-
-Got really annoyed with trying to find how to bring up an old git version in my IDE window and gave up for now. I think it's probably done using a hard reset but by the time I could do that, I'd already nuked my recent commits and didn't want to reset to an older version. 
 
 Added: 
 [alias]
