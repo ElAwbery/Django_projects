@@ -35,7 +35,7 @@ charlieawbery (repository root)
 
 In production I keep static files in a separate directory at the same level as the root directory. This is generally considered good practice, though it doesn't really matter for projects this small. However, it does make for a simple view of the overall project and an easily accessible, unique path to access all static files. 
 
-My local development set up uses the typical Django structure for static files and templates, so that there is an extra folder mirroring the app name for templates and static files, for example as follows:
+My local development set-up uses the typical Django structure for static files and templates, so that there is an extra folder mirroring the app name for templates and static files, for example as follows:
 
 ```
 - hubapp
