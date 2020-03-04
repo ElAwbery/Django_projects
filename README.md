@@ -50,7 +50,7 @@ My local development set-up uses the typical Django structure for static files a
                - - - - images folder
 
 ```
-Django keeps track of static files in a cache automatically created outside the main project folder. The extra folder ensures that any duplicate file names are recognized as belonging to their separate projects. This is not necessary to serve files from the remote server. Static files are kept separately in a public_html folder at the same level as the root directory and Apache uses the file pathname to access templates. 
+Django keeps track of static files in a cache automatically created outside the main project folder. The extra folder ensures that any duplicate file names are recognized as belonging to their separate projects. This is not necessary to serve files from the remote server where static files are kept separately in a public_html folder at the same level as the root directory and Apache uses the file pathname to access templates. 
 
 Other Django apps live at the same level as hubapp in the above hierarchy. Not all of them are public yet. I work on the principle of keeping modularity as small and as contained as possible. All of the apps are designed to be easily pluggable. 
 
