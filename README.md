@@ -3,33 +3,33 @@ This is a public copy of the set-up for some of my Django projects. The project 
 This is a hierarchy map showing the relationship of the most important apps and files: 
 ```
 charlieawbery (repository root)
-- - apps settings
-- - secrets.json
-- - init.py
-- - .venv (all my Django virtual environments here)
-- - config 
+- apps settings
+- secrets.json
+- init.py
+- .venv (all my Django virtual environments here)
+- config 
      - - basesettings.py
      - - productionsettings.py
      - - devsettings.py
      - - init.py
      - - urls.py
-- - .gitignore
-- - activity log
-- - manage.py
-- - readme
-- - requirements.txt (pip freeze)
+- .gitignore
+- activity log
+- manage.py
+- readme
+- requirements.txt (pip freeze)
 - passenger_wsgi.py
 - wsgi.py
-- - hubapp (lamding page and redirection app)
+- hubapp (lamding page and redirection app)
     - - init.py
     - - models.py
     - - views.py
     - - urls.py
     - - templates folder
-        - - html files
+        - - - html files
     - - static
-        - - css folder
-        - - images folder
+        - - - css folder
+        - - - images folder
 
 ```
 
