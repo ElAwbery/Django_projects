@@ -3,4 +3,4 @@ from .basesettings import *
 as well as into the child settings files. 
 
 The python runserver command takes a settings variable:
-python manage.py runserver --settings=config.childfile
+$ python manage.py runserver --settings=config.childfile
