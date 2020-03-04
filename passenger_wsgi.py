@@ -17,10 +17,6 @@ if sys.executable != INTERP: os.execl(INTERP, INTERP, *sys.argv)
 
 environ=os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.productionsettings')
 
-# This is the information Passenger needs to talk to python via WSGI.
-#import django.core.handlers.wsgi
-#application = django.core.handlers.wsgi.WSGIHandler()
-
 # This is the recommended code for the file from Django
 from wsgi import app
 application = app
