@@ -4,6 +4,7 @@
 import os
 import sys
 
+# If you change your project hierarchy or settings files names, update the path to settings file here
 def main():
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.productionsettings')
     try:
