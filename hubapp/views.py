@@ -25,14 +25,6 @@ def vajrayana_redirect(request):
     response=redirect("https://vajrayananow.com/")
     return response
 '''
-def lucky_egg_redirect(request):
-    response="<h1>Charlieawbery Lucky egg</h1>"
-    # response=redirect("/lucky_egg")
-    return response
-
-def idletwilight_redirect(request):
-    response="<h1>Charlieawbery Idletwilight</h1>"
-    # response=redirect("/idletwilight")
-    return response
+Other views are here
 '''
 
