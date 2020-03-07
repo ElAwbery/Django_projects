@@ -56,5 +56,5 @@ Django keeps track of static files in a cache automatically created outside the 
 
 Other Django apps live at the same level as hubapp in the above hierarchy. Not all of them are public yet. I work on the principle of keeping modularity as small and as contained as possible. All of the apps are designed to be easily pluggable. 
 
-This repo is a flash shot of the state of my Django projects at a particular point in time (February 2020), it is not a working project and is not regularly updated. 
+This repo is a snapshot of the state of my Django projects at a particular point in time (February 2020), it is not a working project and is not regularly updated. 
 
