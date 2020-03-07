@@ -22,7 +22,7 @@ charlieawbery (repository root)
 - requirements.txt (pip freeze)
 - passenger_wsgi.py
 - wsgi.py
-- hubapp (lamding page and redirection app)
+- hubapp (landing page and redirection app)
     - - init.py
     - - models.py
     - - views.py
