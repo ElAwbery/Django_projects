@@ -27,9 +27,9 @@ from django.core.exceptions import ImproperlyConfigured
 
 DEBUG = False
 
-TEMPLATE_DEBUG = False
+TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = ['local port here']
+ALLOWED_HOSTS = ['server IP and port here']
 
 
 # Gets secret key from secrets module
