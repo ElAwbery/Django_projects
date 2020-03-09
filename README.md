@@ -2,7 +2,7 @@
 
 This is a public copy of the source code for some of my Django projects. All secret keys and settings have been replaced with dummies. The project hierarchy I use separates configuration from project management. I started with a stripped down version of one of the [Django cookiecutters](https://cookiecutter-django.readthedocs.io/en/latest/) recommended in [Two Scoops of Django.](https://www.amazon.com/Two-Scoops-Django-Best-Practices/dp/0981467342)
 
-My website, charlieawbery.com, is mostly organized in the hubapp directory. Config is where I keep all settings files, separated out for production and development. I first develop new functionality in my local environment (Mac, MAMP, PhpMyAdmin, Django/Python in VSC). I then usually push changes to the git master, pull to the remote server and debug using debugsettings.py, but I also use FTP for negligable updates or transferring new static files. 
+My website, charlieawbery.com, is mostly organized in the hubapp directory. Config is where I keep all settings files, separated out for production and development. I first develop new functionality in my local environment (Mac, MAMP, PhpMyAdmin, Django/Python in VSC). I then usually push changes to the git master, but I also use FTP for minor updates or transferring new static files. I deploy with productionsettings.py and use ssh for any bugs that occur in deployment. 
 
 This is a hierarchy map showing the relationship of the most important apps and files: 
 ```
